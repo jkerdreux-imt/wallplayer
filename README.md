@@ -1,4 +1,4 @@
-# Wallplayer
+# WallPlayer
 
 Wallplayer is a modern, web-based media player designed for large touch screens and collective spaces. It allows you to browse and play videos from a local or network-mounted directory, with a simple, robust, and touch-friendly interface for big screens.
 
