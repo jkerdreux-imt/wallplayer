@@ -1,6 +1,6 @@
 # WallPlayer
 
-Wallplayer is a modern, web-based media player designed for large touch screens and collective spaces. It allows you to browse and play videos from a local or network-mounted directory, with a simple, robust, and touch-friendly interface for big screens.
+WallPlayer is a modern, web-based media player designed for large touch screens and collective spaces. It allows you to browse and play videos from a local or network-mounted directory, with a simple, robust, and touch-friendly interface for big screens.
 
 ## Overview
 
@@ -18,7 +18,7 @@ Wallplayer is a modern, web-based media player designed for large touch screens 
 
 ## Requirements
 
-Wallplayer requires FFmpeg to be installed on your system for video thumbnail generation and subtitle extraction:
+WallPlayer requires FFmpeg to be installed on your system for video thumbnail generation and subtitle extraction:
 
 ```bash
 # Ubuntu/Debian
@@ -35,7 +35,7 @@ choco install ffmpeg
 
 ### Videos Directory
 
-By default, Wallplayer creates and uses a `videos` directory in the current working directory. You can change this by setting the `VIDEOS_DIR` environment variable:
+By default, WallPlayer creates and uses a `videos` directory in the current working directory. You can change this by setting the `VIDEOS_DIR` environment variable:
 
 ```bash
 # Set videos directory
