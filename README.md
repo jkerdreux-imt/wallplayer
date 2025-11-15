@@ -45,10 +45,51 @@ export VIDEOS_DIR=/path/to/your/videos
 VIDEOS_DIR=/path/to/your/videos ./wallplayer
 ```
 
-## License
+## Docker
 
-This project is licensed under the GNU General Public License v3.0 (GPLv3).
-See the [LICENSE](LICENSE) file for details.
+WallPlayer provides a Docker image for easy deployment. The image includes FFmpeg and runs the application with proper security settings.
+
+### Using Docker Compose
+
+Create a `videos` directory in your project root and place your video files there. The `compose.yaml` file is already provided:
+
+```yaml
+services:
+  wallplayer:
+    image: ghcr.io/jkerdreux-imt/wallplayer:latest
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./videos:/videos:ro
+      - wallplayer_data:/data
+    environment:
+      - PORT=9999
+      - VIDEOS_DIR=/videos
+    restart: unless-stopped
+
+volumes:
+  wallplayer_data:
+```
+
+Then run:
+
+```bash
+docker compose up
+```
+
+This will start WallPlayer on `http://localhost:9999` with your videos mounted read-only and persistent data for thumbnails/subtitles.
+
+### Manual Docker Usage
+
+```bash
+# Build the image
+docker build -t wallplayer .
+
+# Run the container
+docker run -p 9999:9999 -v ./videos:/videos:ro -v wallplayer_data:/data wallplayer
+```
+
+The image is also automatically built and pushed to GitHub Container Registry on each commit to the main branch.
 
 ## Commands
 
@@ -73,3 +114,8 @@ To run the executable:
 ```bash
 ./wallplayer
 ```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3).
+See the [LICENSE](LICENSE) file for details.
