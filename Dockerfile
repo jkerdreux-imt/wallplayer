@@ -31,10 +31,10 @@ WORKDIR /app
 COPY --from=builder /app/wallplayer .
 
 # Create directories for videos and data
-RUN mkdir -p /videos /data/thumbnails /data/subtitles
+RUN mkdir -p /app/videos /app/data/thumbnails /app/data/subtitles
 
 # Change ownership
-RUN chown -R appuser:appgroup /app /videos /data
+RUN chown -R appuser:appgroup /app
 
 # Switch to non-root user
 USER appuser

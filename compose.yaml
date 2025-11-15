@@ -4,11 +4,11 @@ services:
     ports:
       - "9999:9999"
     volumes:
-      - ./videos:/videos:ro
+      - ./videos:/app/videos:ro
       - wallplayer_data:/app/data
     environment:
       - PORT=9999
-      - VIDEOS_DIR=/videos
+      - VIDEOS_DIR=/app/videos
     restart: unless-stopped
 
 volumes:

@@ -60,11 +60,11 @@ services:
     ports:
       - "9999:9999"
     volumes:
-      - ./videos:/videos:ro
-      - wallplayer_data:/data
+      - ./videos:/app/videos:ro
+      - wallplayer_data:/app/data
     environment:
       - PORT=9999
-      - VIDEOS_DIR=/videos
+      - VIDEOS_DIR=/app/videos
     restart: unless-stopped
 
 volumes:
@@ -86,7 +86,7 @@ This will start WallPlayer on `http://localhost:9999` with your videos mounted r
 docker build -t wallplayer .
 
 # Run the container
-docker run -p 9999:9999 -v ./videos:/videos:ro -v wallplayer_data:/app/data wallplayer
+docker run -p 9999:9999 -v ./videos:/app/videos:ro -v wallplayer_data:/app/data wallplayer
 ```
 
 The image is also automatically built and pushed to GitHub Container Registry on each commit to the main branch.
