@@ -1,3 +1,18 @@
+/* Font faces for Material Symbols */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/static/fonts/material-symbols-outlined.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/static/fonts/material-symbols-rounded.ttf') format('truetype');
+}
+
 /* Theme Variables */
 :root {
     /* Dark theme (default) */
