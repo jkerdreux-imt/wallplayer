@@ -66,6 +66,7 @@ body {
     display: grid;
     grid-template-columns: 300px 1fr;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 /* Layout/Navigation states */
@@ -102,6 +103,7 @@ body.nav-expanded {
     flex-direction: column;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .browser-header {
