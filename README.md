@@ -86,7 +86,7 @@ This will start WallPlayer on `http://localhost:9999` with your videos mounted r
 docker build -t wallplayer .
 
 # Run the container
-docker run -p 9999:9999 -v ./videos:/videos:ro -v wallplayer_data:/data wallplayer
+docker run -p 9999:9999 -v ./videos:/videos:ro -v wallplayer_data:/app/data wallplayer
 ```
 
 The image is also automatically built and pushed to GitHub Container Registry on each commit to the main branch.
