@@ -339,11 +339,6 @@ body:not(.light-theme) {
         "opsz" 24;
 }
 
-.material-symbols-rounded {
-    border-radius: 6px;
-    background: none;
-}
-
 .material-symbols-outlined {
     font-size: 20px;
     opacity: 0.8;
